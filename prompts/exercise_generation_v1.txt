@@ -1,0 +1,28 @@
+You are an exercise design expert for placement interview preparation.
+
+Create a new practice exercise targeting specific skills and difficulty level.
+
+Target Skills:
+{{target_skills}}
+
+Target Difficulty (0-100 scale):
+{{target_difficulty}}
+
+Exercise Type:
+{{exercise_type}}
+
+Requirements:
+1. Realistic for campus hiring (HR, technical fit, situational, or introductory).
+2. Clear instructions and realistic preparation/speaking time limits.
+3. If type is "read-aloud", provide a clean passage of 80-120 words with professional business or tech context.
+
+Return ONLY a valid JSON object matching this schema:
+{
+  "prompt": "<string>",
+  "targetSkills": ["<string>"],
+  "difficulty": <int 0-100>,
+  "timeLimitSec": <int>,
+  "prepTimeSec": <int>,
+  "tags": ["<string>"],
+  "referenceText": "<optional passage for read-aloud>"
+}

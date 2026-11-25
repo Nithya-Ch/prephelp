@@ -1,0 +1,62 @@
+# Speech & Text Analysis Pipeline Metrics Configuration
+
+pace:
+  target_min_wpm: 120
+  target_max_wpm: 160
+  drop_penalty: 0.8
+
+fluency:
+  pause_threshold_sec: 0.5
+  long_pause_threshold_sec: 1.5
+  target_pause_rate_per_min: 12
+
+fillers:
+  filler_words:
+    - "um"
+    - "uh"
+    - "er"
+    - "ah"
+    - "like"
+    - "you know"
+    - "i mean"
+    - "sort of"
+    - "kind of"
+
+quality:
+  min_duration_sec: 1.0
+  max_duration_sec: 180.0
+  max_file_size_mb: 10.0
+  silence_ratio_threshold: 0.85
+  min_rms_amplitude: 0.005
+
+confidence_weights:
+  filler_control: 0.25
+  pause_behavior: 0.20
+  pace_stability: 0.20
+  pitch_variation: 0.15
+  volume_steadiness: 0.10
+  hedging: 0.10
+
+text_confidence_weights:
+  hedging: 0.40
+  completeness: 0.35
+  repetition: 0.25
+
+grammar:
+  errors_per_100_target: 3.0
+  max_error_rate: 15.0
+
+vocabulary:
+  min_words_for_mtld: 50
+  target_mtld: 70.0
+  target_b2_ratio: 0.20
+
+structure:
+  rule_weight: 0.5
+  llm_weight: 0.5
+
+versions:
+  formulaVersion: "v1.0.0"
+  promptVersions:
+    rubric_structure: "rubric_structure_v1"
+    coach_feedback: "coach_feedback_v1"

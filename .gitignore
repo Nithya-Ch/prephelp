@@ -1,0 +1,28 @@
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local uploads and logs
+uploads/
+*.log
+npm-debug.log*
+
+# Local editor and operating-system files
+.idea/
+.DS_Store
+Thumbs.db
